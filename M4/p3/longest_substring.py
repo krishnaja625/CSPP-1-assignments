@@ -18,7 +18,6 @@ If you have time, come back to this problem after you've had a break and cleared
 def main():
     """ gives longest_substring """
     str_ = input()
-    """ the input string"""
     tstr_ = ""
     for i, item in enumerate(str_):
         flag_ = 0
@@ -39,4 +38,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
