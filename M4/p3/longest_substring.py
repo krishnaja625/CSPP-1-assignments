@@ -1,3 +1,4 @@
+"""length"""
 def main():
     """Count the occurence of the substring in a string"""
     str_ = input()
@@ -10,6 +11,5 @@ def main():
         if len(sub_str) > len(max_str):
             max_str = sub_str
     print(max_str)
-
 if __name__ == "__main__":
     main()
