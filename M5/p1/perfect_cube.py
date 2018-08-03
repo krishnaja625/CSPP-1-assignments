@@ -17,9 +17,9 @@ def main():
         if(guess**3 >= s_2):
             break
     if(guess**3 == s_2):
-            print("cube root is possible")
+        print("cube root is possible")
     else:
-            print("cube root is not possible")
+        print("cube root is not possible")
 	
 if __name__== "__main__":
     main()
