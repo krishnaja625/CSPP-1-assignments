@@ -11,7 +11,7 @@
 
 def main():
     """cube root"""
-    s_1 = int(input("enter any number"))
+    s_1 = int(input())
     s_2 = abs(s_1)
     for guess in range(1, S_2+1):
         if(guess**3 >= s_2):
