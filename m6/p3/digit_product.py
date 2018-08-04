@@ -19,6 +19,6 @@ while n>0:
 if n3>=0:
     print(s)
 else:
-    print("-", s)
+    print("-",s)
 if __name__ == "__main__":
     main()
