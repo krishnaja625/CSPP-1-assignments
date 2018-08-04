@@ -19,7 +19,7 @@ while n>0:
     n2 = n%10
     s = s*n2
     n = n//10
-if n3>=0:
+if n3 >= 0:
     print(s)
 else:
     k = -1*s
