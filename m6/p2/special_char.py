@@ -9,11 +9,9 @@ def main():
     '''
 A = input()
 a= len(A)
-for i in range(0, a+1):
-    if A[i] == "(!@#$%^&*)"
-        A[i] = " "
-
-
-
+for i in range(0, a):
+    if A[i] == "!@#$%^&*":
+        A = A[0:i-1]+" "+A[i+1:a]
+print(A)
 if __name__ == "__main__":
     main()
