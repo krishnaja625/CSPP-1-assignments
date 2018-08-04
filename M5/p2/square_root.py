@@ -13,4 +13,3 @@ def main():
         print(guess)
 if __name__ == "__main__":
     main()
-    
