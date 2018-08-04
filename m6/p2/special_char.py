@@ -8,10 +8,14 @@ def main():
     Read string from the input, store it in variable str_input.
     '''
 A = input()
-a= len(A)
-for i in range(0, a):
-    if A[i] == "!@#$%^&*":
-        A = A[0:i-1]+" "+A[i+1:a]
+A1= len(A)
+B = ""
+for char in A:
+    if char in "!@#$%^&*":
+        char = " "
+        B = B + char
+    else:
+        B = B + char
 print(A)
 if __name__ == "__main__":
     main()
