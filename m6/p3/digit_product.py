@@ -8,8 +8,14 @@ def main():
     '''
     Read any number from the input, store it in variable int_input.
     '''
-    int_input = int(input())
-
-
+N = int(input())
+n1=N
+n2=0
+s=1
+while n1!=0:
+    n1 = N//10
+    n2 = n1%10
+    s = s*n2
+print(s)
 if __name__ == "__main__":
     main()
