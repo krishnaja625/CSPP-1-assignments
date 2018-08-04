@@ -8,17 +8,17 @@ def main():
     '''
     Read any number from the input, store it in variable int_input.
     '''
-n = int(input())
-n2 = n
-n3 = abs(n)
+n3 = int(input())
+n2 = n3
+n = abs(n3)
 s = 1
 while n>0:
     n2 = n%10
     s = s*n2
     n = n//10
-if n>=0:
+if n3>=0:
     print(s)
 else:
-    print("-",s)
+    print("-", s)
 if __name__ == "__main__":
     main()
