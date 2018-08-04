@@ -1,7 +1,7 @@
 '''This program evaluates the square root of a number.'''
 def main():
     '''Main function.'''
-    num_1 = int(input())
+    num_1 = input()
     epsilon = 0.01
     step = 0.1
     guess = 0
