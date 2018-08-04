@@ -14,7 +14,7 @@ N = abs(N3)
 S = 0
 K = 0
 if N>0:
-    S=1
+    S = 1
 while N>0:
     N2 = N%10
     S = S*n2
