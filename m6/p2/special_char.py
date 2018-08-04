@@ -8,7 +8,7 @@ def main():
     Read string from the input, store it in variable str_input.
     '''
 A = input()
-A1= len(A)
+A1 = len(A)
 B = ""
 for char in A:
     if char in "!@#$%^&*":
