@@ -8,8 +8,8 @@ def main():
     '''
     Read number from the input, store it in variable num.
     '''
-num_1 = int(input())
-for i in range(1, num_1+1):
+n = int(input())
+for i in range(1, n+1):
     if i%3 == 0 and i%5 == 0:
         print("Fizz")
         print("Buzz")
