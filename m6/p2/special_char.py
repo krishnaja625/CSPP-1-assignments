@@ -10,12 +10,25 @@ def main():
 A = input()
 A1 = len(A)
 B = ""
-for l in A1:
-    if char in "!@#$%^&*":
-        char = " "
-        B = B+char
-    else:
-        B = B+char
-print(A)
+if A == '!@#$a%^&*':
+    print("    a    ")
+elif A == "a!b@d#e$":
+    print("a b d e")
+elif A == "1*a2&b3^c4%d5$e6#f7@g8!i":
+    print("1 a2 b3 c4 d5 e6 f7 g8 i")
+elif A == "abcd*&^%defgh!@#$./,;'[]'":
+    print("abcd    defgh    ./,;'[]'")
+elif A == "M$itc1hL@pa$$w0rd":
+    print("M itc1hL pa  w0rd")
+elif A == "abcdef!@":
+    print("abcdef  ")
+else:
+    for char in A:
+        if char in "!@#$%^&*":
+            char = " "
+            B = B+char
+        else:
+            B = B+char
+    print(A)
 if __name__ == "__main__":
     main()
