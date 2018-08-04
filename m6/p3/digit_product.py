@@ -8,21 +8,21 @@ def main():
     '''
     Read any number from the input, store it in variable int_input.
     '''
-n3 = int(input())
-n2 = n3
-n = abs(n3)
-s = 0
-k = 0
-if n>0:
-    s=1
-while n>0:
-    n2 = n%10
-    s = s*n2
-    n = n//10
-if n3 >= 0:
-    print(s)
+N3 = int(input())
+N2 = N3
+N = abs(N3)
+S = 0
+K = 0
+if N>0:
+    S=1
+while N>0:
+    N2 = N%10
+    S = S*n2
+    N = N//10
+if N3 >= 0:
+    print(S)
 else:
-    k = -1*s
-    print(k)
+    K = -1*S
+    print(K)
 if __name__ == "__main__":
     main()
