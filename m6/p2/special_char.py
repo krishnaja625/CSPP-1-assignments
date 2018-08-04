@@ -10,12 +10,12 @@ def main():
 A = input()
 A1 = len(A)
 B = ""
-for char in A:
+for l in A1:
     if char in "!@#$%^&*":
         char = " "
-        B = B + char
+        B = B+char
     else:
-        B = B + char
+        B = B+char
 print(A)
 if __name__ == "__main__":
     main()
