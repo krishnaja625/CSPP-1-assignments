@@ -5,7 +5,9 @@ example:
 	output: 6
 '''
 def main():
-    '''Read any number from the input, store it in variable int_input.'''
+    '''
+    Read any number from the input, store it in variable int_input.
+    '''
 N3 = int(input())
 N2 = N3
 N = abs(N3)
