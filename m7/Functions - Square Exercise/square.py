@@ -4,19 +4,18 @@
 # This function takes in one number and returns one number.
 
 
-def square(x):
-  c = x*x
-  return c
+def square(x_):
+# square of a number
+    c_ = x_*x_
+    return c_
 
 def main():
-	data = input()
-	data = float(data)
-	temp = str(data).split('.')
-	if(temp[1] == '0'):
-		print(square(int(float(str(data)))))
-	else:
-		print(square(data))
-
-if __name__== "__main__":
-	main()
-
+    data = input()
+    data = float(data)
+    temp = str(data).split('.')
+    if temp[1] == '0':
+        print(square(int(float(str(data)))))
+    else:
+        print(square(data))
+if __name__ == "__main__":
+    main()
