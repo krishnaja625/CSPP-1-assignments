@@ -1,13 +1,16 @@
-"""sum"""
-def sum_of_digits(n_1):
-    """sum"""
-    while n_1 > 0:
-        r_1 = n_1%10
-        return r_1+sum_of_digits(n_1//10)
-    return 0
+'''Sum of digits using recursion.'''
+def sumofdigits(n_1):
+    '''
+    n is positive Integer
+    returns: a positive integer, the sum of digits of n.
+    '''
+    if n_1 == 0:
+        return 0
+    return n_1%10+sumofdigits(n_1//10)
 def main():
-    """main string"""
+    '''Main Function.'''
     a_1 = input()
-    print(sum_of_digits(int(a_1)))
+    print(sumofdigits(int(a_1)))
 if __name__ == "__main__":
     main()
+    
