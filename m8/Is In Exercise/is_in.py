@@ -11,7 +11,12 @@ def isIn(char, aStr):
     returns: True if char is in aStr; False otherwise
     '''
     # Your code here
-   
+    if char == astr[0]:
+        return True
+    elif len(astr) == 1:
+        return False
+    else:
+        return isIn(char, astr[1:])
 
 def main():
     data = input()
@@ -19,4 +24,3 @@ def main():
     print(isIn((data[0][0]), data[1]))
 if __name__ == "__main__":
     main()
-    
