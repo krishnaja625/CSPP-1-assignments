@@ -12,6 +12,8 @@ def recurPower(base_, exp_1):
     returns: int or float, base^exp
     '''
     # Your code here
+    if exp_1 == 0:
+        return 1
     if exp_1 == 1:
         return base_
     else:
