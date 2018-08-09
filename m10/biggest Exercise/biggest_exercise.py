@@ -10,15 +10,15 @@ def biggest(aDict):
     '''
     # Your Code Here
     max = 0 
-    a=0
+    z = []
     for i in aDict:
        if max<len(aDict[i]):
             max=len(aDict[i])
-            a=i
-    return a
+    for i in aDict:
+        if len(aDict[i]) == max:
+            z += i
+    return z
     
-    
-
 def main():
     n=input()
     aDict={}
