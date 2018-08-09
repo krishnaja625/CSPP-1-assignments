@@ -29,7 +29,7 @@ def get_available_letters(letters_guessed):
     list1 = []
     for i in dict_1.values():
         list1.append(i)
-    return a.join(list1)
+    return a_1.join(list1)
 def main():
     '''
     Main function for the given program
