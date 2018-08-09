@@ -17,7 +17,7 @@ def get_available_letters(letters_guessed):
     var_2 = list(letters_guessed)
     keys_1 = []
     keys_2 = []
-    a = ""
+    a_1 = ""
     for i in var_1:
         keys_1.append(ord(i))
     dict_1 = dict(zip(keys_1, var_1))
