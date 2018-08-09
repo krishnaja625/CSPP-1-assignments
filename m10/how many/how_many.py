@@ -23,7 +23,6 @@ def main():
     for i in range(int(n)):
         s=input()
         l=s.split()
-        print(l)
         if l[0][0] not in aDict:
             aDict[l[0][0]]=[l[1]]
         else:
