@@ -17,6 +17,7 @@ def get_available_letters(letters_guessed):
     var_2 = list(letters_guessed)
     keys_1 = []
     keys_2 = []
+    a = ""
     for i in var_1:
         keys_1.append(ord(i))
     dict_1 = dict(zip(keys_1, var_1))
@@ -28,7 +29,7 @@ def get_available_letters(letters_guessed):
     list1 = []
     for i in dict_1.values():
         list1.append(i)
-    return "".join(list1)
+    return a.join(list1)
 def main():
     '''
     Main function for the given program
