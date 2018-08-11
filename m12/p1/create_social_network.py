@@ -55,9 +55,6 @@ def create_social_network(data):
     dict_1 = dict(zip(list_key, list_value))
     return dict_1
 
-
-
-
 def main():
     '''
         handling testcase input and printing output
