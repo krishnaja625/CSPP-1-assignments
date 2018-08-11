@@ -20,7 +20,7 @@ def follow(network, arg1, arg2):
         l_1 = []
         l_1.append(arg2)
         network[arg1] = l_1
-    return networ
+    return network
 def unfollow(network, arg1, arg2):
     '''
         3 arguments are passed to this function
@@ -46,7 +46,12 @@ def delete_person(network, arg1):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-   
+    if arg1 in network:
+        del network[arg1]
+    for l in network:
+        if arg1 in network[l]:
+            network[l].remove(arg1)
+    return network   
 
 def main():
     '''
