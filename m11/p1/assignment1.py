@@ -32,6 +32,7 @@ def get_word_score(word, n):
     score = score*l_1
     if l_1 == n:
         score = 50 + score
+    return score
 def main():
     '''
     Main function for the given problem
