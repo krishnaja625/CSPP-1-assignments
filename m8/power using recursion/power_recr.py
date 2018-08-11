@@ -14,8 +14,8 @@ def recurPower(base_, exp_1):
     # Your code here
     if exp_1 == 0:
         return 1
-    if exp_1 == 1:
-        return base_
+    #if exp_1 == 1:
+        #return base_
     else:
         return base_*recurPower(base_, exp_1-1)
     
