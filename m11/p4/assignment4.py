@@ -14,7 +14,7 @@ def calculateHandlen(hand):
     for i in hand:
         handlen = handlen + hand[i]
         i = i
-    return A
+    return handlen
 
 def main():
     n=input()
