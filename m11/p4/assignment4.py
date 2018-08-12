@@ -10,9 +10,10 @@ def calculateHandlen(hand):
     returns: integer
     """
     # TO DO... <-- Remove this comment when you code this function
-    A = 0
+    handlen = 0
     for i in hand:
-        A = A + hand[i]
+        handlen = handlen + hand[i]
+        i = i
     return A
 
 def main():
@@ -26,5 +27,5 @@ def main():
         
 
 
-if __name__== "__main__":
-    main()
+if __name__ == "__main__":
+    main
