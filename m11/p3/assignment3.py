@@ -7,7 +7,7 @@ Testing: Make sure the test_isValidWord tests pass. In addition, you will want t
 Fill in the code for isValidWord in ps4a.py and be sure you've passed the appropriate tests in test_ps4a.py before pasting your function definition here.
 '''
 
-def isValidWord(word, hand, wordList):
+def is_validword(word, hand, wordList):
     """
     Returns True if word is in the wordList and is entirely
     composed of letters in the hand. Otherwise, returns False.
@@ -24,14 +24,14 @@ def isValidWord(word, hand, wordList):
             return False
     return word in wordList
 def main():
-    word=input()
-    n=int(input())
-    adict={}
+    word = input()
+    n = int(input())
+    adict = {}
     for i in range(n):
-        data=input()
-        l=data.split()
-        adict[l[0]]=int(l[1])
-    l2=input().split()
-    print(isValidWord(word,adict,l2))
-if __name__== "__main__":
+        data = input()
+        l = data.split()
+        adict[l[0]] = int(l[1])
+    l_2 = input().split()
+    print(is_validword(word,adict,l_2))
+if __name__ == "__main__":
     main()
