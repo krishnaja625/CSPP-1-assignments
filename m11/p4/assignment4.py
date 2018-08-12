@@ -12,19 +12,19 @@ def calculateHandlen(hand):
     # TO DO... <-- Remove this comment when you code this function
     A = 0
     for i in hand:
-    	A = A + hand[i]
+        A = A + hand[i]
     return A
 
 def main():
-	n=input()
-	adict={}
-	for i in range(int(n)):
-		data=input()
-		l=data.split()
-		adict[l[0]]=int(l[1])
-	print(calculateHandlen(adict))
-		
+    n=input()
+    adict={}
+    for i in range(int(n)):
+        data=input()
+        l=data.split()
+        adict[l[0]]=int(l[1])
+    print(calculateHandlen(adict))
+        
 
 
 if __name__== "__main__":
-	main()
+    main()
