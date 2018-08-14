@@ -21,8 +21,8 @@ def is_straight(hand):
         list_1.append(dic[card[0]])
     list_1.sort()
     for i in range(len(list_1)-1):
-            l_1 = list_1[i+1] - list_1[i]
-            if (l_1 == 1):
+            l_1 = list_1[i+1]-list_1[i]
+            if l_1 == 1:
                 cont = cont + 1
     if cont == (len(list_1) - 1):
         return True
@@ -60,7 +60,7 @@ def hand_rank(hand):
         max_1 = 2
     elif is_straight(hand):
         max_1 = 1
-    else: 
+    else:
         max_1 = 0
     return max_1
 
