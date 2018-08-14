@@ -14,7 +14,8 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    dic = {'A':14, '2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13}
+    dic = {'A':14, '2':2, '3':3, '4':4, '5':5, '6':6\
+, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13}
     list_1 = []
     cont = 0
     for card in hand:
@@ -80,7 +81,6 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
 
-    return 1
 
 def poker(hands):
     '''
