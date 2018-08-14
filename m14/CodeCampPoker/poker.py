@@ -21,13 +21,12 @@ def is_straight(hand):
         list_1.append(dic[card[0]])
     list_1.sort()
     for i in range(len(list_1)-1):
-            l = list_1[i+1] - list_1[i]
-            if (l == 1):
+            l_1 = list_1[i+1] - list_1[i]
+            if (l_1 == 1):
                 cont = cont + 1
     if cont == (len(list_1) - 1):
         return True
-    else:
-        return False
+    return False
 
 def is_flush(hand):
     '''
