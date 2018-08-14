@@ -16,13 +16,13 @@ def is_straight(hand):
     '''
     hand_1 = hand.copy()
     straight=False
-    numbers=set(numbers)
     hand_1.sort()
-    for i in range(len(hand_1)):
-        if hand_1[i]-hand_1[i-1] == 1:
-        	cont = cont + 1
-        if cont == len(hand_1 - 1):
-            straight = True
+    for j in hand_1:
+	    for i in range(len(j)):
+	        if j[i]-j[i-1] == 1:
+	        	cont = cont + 1
+	        if cont == (len(j) - 1):
+	            straight = True
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
@@ -32,7 +32,12 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    pass
+    for i in hand:
+    	suits = [i[1]]
+    if len(set(suits))==1:
+        return True
+    else:
+        return False
 
 def hand_rank(hand):
     '''
@@ -42,6 +47,16 @@ def hand_rank(hand):
         The first version should identify if the given hand is a straight
         or a flush or a straight flush.
     '''
+    max_1 = 0
+    if is_straight(hand):
+    	max_1 = 1
+    elif is_flush(hand):
+    	max_1 = 2
+    elif is_straight(hand) and is_flush(hand):
+    	max_1 = 3
+    else: 
+    	max_1 = 0
+    return max_1
 
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
@@ -58,6 +73,7 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
+
     return 1
 
 def poker(hands):
