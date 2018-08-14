@@ -20,7 +20,7 @@ def is_straight(hand):
     for card in hand:
         list_1.append(dic[card[0]])
     list_1.sort()
-    for i in range(len(list_1)):
+    for i in range(len(list_1)-1):
             l = list_1[i+1] - list_1[i]
             if (l == 1):
                 cont = cont + 1
