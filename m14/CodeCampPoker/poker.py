@@ -19,7 +19,7 @@ def is_straight(hand):
     hand_1.sort()
     for j in hand_1:
 	    for i in range(len(j)):
-	        if j[i]-j[i-1] == 1:
+	        if ((j[i+1]-j[i]) == 1):
 	        	cont = cont + 1
 	        if cont == (len(j) - 1):
 	            straight = True
