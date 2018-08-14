@@ -55,12 +55,12 @@ def hand_rank(hand):
         or a flush or a straight flush.
     '''
     max_1 = 0
-    if is_straight(hand):
-        max_1 = 1
+    if is_straight(hand) and is_flush(hand):
+        max_1 = 3
     elif is_flush(hand):
         max_1 = 2
-    elif is_straight(hand) and is_flush(hand):
-        max_1 = 3
+    elif is_straight(hand):
+        max_1 = 1
     else: 
         max_1 = 0
     return max_1
