@@ -78,18 +78,18 @@ def is_fourkind(hand):
     for i in list_1:
         if list_1.count(i)==4:
         	cont = 1
-    if list_1[0]>list_1[4]:
-        if list_1[4] > maxhand
-            return True
+        if list_1[0]<list_1[4]:
+            if list_1[4] > maxhand
+                return True
+            else:
+    	        maxhand = list_1[4]
+                return False
         else:
-    	    maxhand = list_1[4]
-            return False
-    else:
-        if list_1[0] > maxhand
-            return True
-        else:
-    	    maxhand = list_1[0]
-            return False   	
+            if list_1[0] > maxhand
+                return True
+            else:
+    	        maxhand = list_1[0]
+                return False   	
 
 def is_fullhouse(hand):
     dict1={'A':14, 'K':13, 'Q':12, 'J':11,'T':10}
