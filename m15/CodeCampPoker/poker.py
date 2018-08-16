@@ -137,24 +137,19 @@ def is_threekind(hand):
     else:
         return False
 def is_twopair(hand):
-    dict1={'A':14, 'K':13, 'Q':12, 'J':11,'T':10}
-    b=[]
-    for i in hand:
-        #print (i)
-        a=i[0]
-        #print(a)
-        if a in dict1.keys():
-            a=dict1[a]
-        #print (a)
-        a=int(a)
-        b.append(a)
-    #print(b)
-    c=set(b)
+    dict1= {'A':14, '2':2, '3':3, '4':4, '5':5, '6':6\
+, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13}
+    list_1 = []
+    cont = 0
+    maxhand = 0
+    for card in hand:
+        list_1.append(dict1[card[0]])
+    list_1.sort()
+    c=set(list_1)
     d=len(c)
-    #print (d)
     c=0
-    for i in b:
-        if b.count(i)==2:
+    for i in list_1:
+        if list_1.count(i)==2:
             c += 1
     if c == 4 and d==3:
         return True
