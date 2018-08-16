@@ -3,7 +3,7 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-    dic = {'A':14, '2':2, '3':3, '4':4, '5':5, '6':6\
+dic = {'A':14, '2':2, '3':3, '4':4, '5':5, '6':6\
 , '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13}
 def is_straight(hand):
     '''
@@ -73,7 +73,7 @@ def is_fourkind(hand):
     cont = 0
     maxhand = 0
     for card in hand:
-        list_1.append(dic[card[0]])
+        list_1.append(dict1[card[0]])
     list_1.sort()
     for i in list_1:
         if list_1.count(i)==4:
