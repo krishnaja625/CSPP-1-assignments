@@ -79,6 +79,7 @@ def is_fourkind(hand):
     for i in list_1:
         if list_1.count(i)==4:
             cont = 1
+    if cont == 1:
         if list_1[0]<list_1[4]:
             if list_1[4] > maxhand:
                 return True
