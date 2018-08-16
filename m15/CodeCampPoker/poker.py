@@ -118,29 +118,22 @@ def is_fullhouse(hand):
     else:
         return False
 def is_threekind(hand):
-    dict1={'A':14, 'K':13, 'Q':12, 'J':11,'T':10}
-    b=[]
-    for i in hand:
-        #print (i)
-        a=i[0]
-        #print(a)
-        if a in dict1.keys():
-            a=dict1[a]
-        #print (a)
-        a=int(a)
-        b.append(a)
-    #print(b)
-    c=set(b)
+    dict1= {'A':14, '2':2, '3':3, '4':4, '5':5, '6':6\
+, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13}
+    list_1 = []
+    cont = 0
+    maxhand = 0
+    for card in hand:
+        list_1.append(dict1[card[0]])
+    list_1.sort()
+    for i in list_1:
+        if list_1.count(i)==3:
+            cont = 1
+    c=set(list_1)
     e=len(c)
-    #print (e)
-
     c=0
-    for i in b:
-        if b.count(i)==3:
-            c=c+1
-    if c==3 and e==3:
+    if cont == 1 and e==3:
         return True
-        #exit()
     else:
         return False
 def is_twopair(hand):
