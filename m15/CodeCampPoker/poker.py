@@ -68,7 +68,8 @@ def is_onepair(hand):
     else:
         return False
 def is_fourkind(hand):
-    dict1={'A':14, 'K':13, 'Q':12, 'J':11,'T':10}
+    dict1= {'A':14, '2':2, '3':3, '4':4, '5':5, '6':6\
+, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13}
     list_1 = []
     cont = 0
     maxhand = 0
