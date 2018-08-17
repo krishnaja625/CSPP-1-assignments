@@ -6,7 +6,49 @@ def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
-    pass
+    dict_1 = {}
+    dict_2 = {}
+    word_freq = {}
+    dict1 = dict1.lower()
+    dict2 = dict2.lower()
+    list_1 = dict1.split(" ")
+    list_1.strip()
+    list_2 = dict2.split(" ")
+    list_2.strip()
+    spl_char = "!@#$%^&*()-_+"
+    for i in list_1:
+        if i in spl_char:
+            list_1.remove(i)
+    for i in list_2:
+        if i in spl_char:
+            list_2.remove(i)
+    list_3 = list_1 + list_2
+    for i in list_1:
+        dict_1[i] = list_1.count(i)
+    for i in list_2:
+        dict_2[i] = list_2.count(i)
+    dict_3 = load_stopwords("stopwords.txt")
+    for i in dict_3.keys():
+        if i in dict_1.keys():
+            del dict_1[i]
+    for i in dict_3.keys():
+        if i in dict_2.keys():
+            del dict_2[i]
+    for i in list_3:
+        if i in list_1 and list_2:
+            word_freq[i]=[list_1.count(i),list_2.count(i)]
+        else:
+            word_freq[i]=[list_1.count(i),list_2.count(i)]
+    numer_n = 0
+    for i in word_freq:
+        numer_n += word_freq[i][0]*word_freq[i][1]
+    for i in word_freq:
+        denom_n1 += word_freq[i][0]**2
+        denom_n2 += word_freq[i][1]**2
+    denom_n1s = math.sqrt(denom_n1)
+    denom_n2s = math.sqrt(denom_n2)
+    denom_1 = denom_n1s*denom_n2s
+    return denom_1
 
 def load_stopwords(filename):
     '''

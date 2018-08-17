@@ -233,8 +233,18 @@ def poker(hands):
         for i in lst:
             if i == maxTemp:
                 temp_hands.append(hands[lst.index(i)])
-        T=max(temp_hands)
-        print(T)
+        # T=map(sortedList,temp_hands,)
+        Temp_hands2=hands.copy()
+        Temp_Ranks
+        k=0
+        for i in temp_hands:
+            Temp_hands2[k] = sorted(i, reverse = True)
+            k+=1
+        TempMax = max(Temp_hands2)
+        Max_index=Temp_hands2.index(TempMax)
+        print(Temp_hands2[i])
+
+
 
 if __name__ == "__main__":
     # read the number of test cases
