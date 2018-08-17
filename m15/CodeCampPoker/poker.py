@@ -224,6 +224,17 @@ def poker(hands):
     # return max(hands, key=hand_rank)
     lst = list(map(hand_rank,hands))
     print(lst)
+    maxTemp = max(lst)
+    countMAx = lst.count(maxTemp)
+    if countMAx == 1 :  
+        return hands[lst.index(maxTemp)]
+    else :
+        temp_hands =[]
+        for i in lst:
+            if i == maxTemp:
+                temp_hands.append(hands[lst.index(i)])
+        T=max(temp_hands)
+        print(T)
 
 if __name__ == "__main__":
     # read the number of test cases
