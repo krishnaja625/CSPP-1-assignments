@@ -13,7 +13,7 @@ def similarity(dict1, dict2):
     dict2 = dict2.lower()
     list_1 = dict1.split(" ")
     list_2 = dict2.split(" ")
-    spl_char = "!@#$%^&*()-_+"
+    spl_char = "0123456789!@#$%^&*()-_+"
     for i in list_1:
         if i in spl_char:
             list_1.remove(i)
