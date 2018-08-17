@@ -40,6 +40,11 @@ def similarity(dict1, dict2):
     numer_n = 0
     for i in word_freq:
         numer_n += word_freq[i][0]*word_freq[i][1]
+    denom_n1 = 0
+    denom_n2s = 0
+    denom_n1s = 0
+    denom_n2 = 0
+    denom_1 = 0
     for i in word_freq:
         denom_n1 += word_freq[i][0]**2
         denom_n2 += word_freq[i][1]**2
