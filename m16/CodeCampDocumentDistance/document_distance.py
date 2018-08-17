@@ -12,9 +12,7 @@ def similarity(dict1, dict2):
     dict1 = dict1.lower()
     dict2 = dict2.lower()
     list_1 = dict1.split(" ")
-    list_1.strip()
     list_2 = dict2.split(" ")
-    list_2.strip()
     spl_char = "!@#$%^&*()-_+"
     for i in list_1:
         if i in spl_char:
