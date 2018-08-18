@@ -43,8 +43,8 @@ def search(search_index, query):
     for word in wordlist_1:
         if word in search_index:
             value_1 = search_index[word]
-        for j in value_1:
-            doc_id += j[0]
+        for i in value_1:
+            doc_id.add(i[0])
     return doc_i
 
 def process_queries(search_index, queries):
