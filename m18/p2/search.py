@@ -44,8 +44,8 @@ def search(search_index, query):
         if word in search_index:
             value_1 = search_index[word]
         for i in value_1:
-            doc_id.add(i[0])
-    return doc_i
+            doc_id = doc_id.add(i[0])
+    return doc_id
 
 def process_queries(search_index, queries):
     '''
