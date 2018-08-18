@@ -59,6 +59,7 @@ def build_search_index(docs):
             count = count + 1
         if word in dictionary_1.keys():
             list_1 = list_1.append((index_word, count))
+            print(list_1)
         if word not in dictionary_1.keys():
             dictionary_1[word] = list_1
     return dictionary_1
