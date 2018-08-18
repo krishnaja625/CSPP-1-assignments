@@ -54,6 +54,7 @@ def build_search_index(docs):
     count = 0
     for line in docs:
         word_1 = word_list(line)
+        print(word_1)
         index_word = docs.index(line)
         for word in word_1:
             count = count + 1
