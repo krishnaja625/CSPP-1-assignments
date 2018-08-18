@@ -40,13 +40,11 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    text_ = text.lower()
-    word = text_.split(" ")
-    word = ["".join([j if ord(j) in range(ord('a'), ord('z')+1) \
-                else "" for j in i]) for i in word]
+    regex = re.compile('[^a-z]')
+    w = [regex.sub("", w.strip()) for w in text.lower().split(" ")]
     stop_words = load_stopwords("stopwords.txt")
-    word = [i for i in word if i not in stop_words]
-    return word
+    w = [i for i in w if i not in stop_words]
+    return w
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
@@ -55,7 +53,6 @@ def build_search_index(docs):
     # initialize a search index (an empty dictionary)
     dictionary_1 = {}
     list_1 = []
-    count = 0
     word_1 = []
     for line in docs:
         word_1.append(word_list(line))
@@ -64,7 +61,6 @@ def build_search_index(docs):
             if word not in dictionary_1.keys():
                 dictionary_1[word] = [(indx_, word_.count(word)) \
                 for indx_, word_ in enumerate(word_1) if word in word_]
-    print(dictionary_1)
     return dictionary_1
     # iterate through all the docs
     # keep track of doc_id which is the list index corresponding the document
