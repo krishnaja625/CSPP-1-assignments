@@ -41,7 +41,7 @@ def search(search_index, query):
     wordlist_1 = word_1.split(" ")
     doc_id = set()
     for word in wordlist_1:
-        if word is in search_index:
+        if word in search_index:
             value_1 = search_index[word]
         for j in value_1:
             doc_id += j[0]
