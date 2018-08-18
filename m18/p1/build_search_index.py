@@ -55,7 +55,7 @@ def build_search_index(docs):
     for line in docs:
         word_1 = word_list(line)
         index_word = docs.index(line)
-        for word in line:
+        for word in word_1:
             count = count + 1
         if word in dictionary_1.keys():
             dictionary_1[word] = list_1.append((index_word, count))
