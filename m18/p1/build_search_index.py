@@ -44,7 +44,7 @@ def word_list(text):
     w_ = [regex.sub("", w_.strip()) for w_ in text.lower().split(" ")]
     stop_words = load_stopwords("stopwords.txt")
     w_ = [i for i in w_ if i not in stop_words]
-    return w
+    return w_
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
