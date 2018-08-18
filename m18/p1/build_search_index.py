@@ -41,7 +41,7 @@ def word_list(text):
         return a list of words
     '''
     regex = re.compile('[^a-z]')
-    return [regex.sub("", w.strip()) for w in string.lower().split(" ")]
+    return [regex.sub("", w.strip()) for w in text.lower().split(" ")]
 
 def build_search_index(docs):
     '''
@@ -57,7 +57,7 @@ def build_search_index(docs):
         for word in line:
             count = count + 1
         dictionary_1[word] = list_1.append((index_word, count))
-    return dictionary_1
+    print(dictionary_1)
     # iterate through all the docs
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
