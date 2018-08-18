@@ -54,14 +54,14 @@ def build_search_index(docs):
     count = 0
     for line in docs:
         word_1 = word_list(line)
-        print(word_1)
         index_word = docs.index(line)
         for word in word_1:
             count = count + 1
         if word in dictionary_1.keys():
-            dictionary_1[word] = list_1.append((index_word, count))
-
-    print(dictionary_1)
+            list_1 = list_1.append((index_word, count))
+        if word not in dictionary_1.keys()
+            dictionary_1[word] = list_1
+    return dictionary_1
     # iterate through all the docs
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
