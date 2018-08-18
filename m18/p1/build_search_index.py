@@ -43,7 +43,7 @@ def word_list(text):
     text_ = text.lower()
     word = text_.split(" ")
     word = ["".join([j if ord(j) in range(ord('a'), ord('z')+1) \
-                else "" for j in i]) for i in text_list]
+                else "" for j in i]) for i in word]
     stop_words = load_stopwords("stopwords.txt")
     word = [i for i in word if i not in stop_words]
     return word
