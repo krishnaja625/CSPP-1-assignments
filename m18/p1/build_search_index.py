@@ -1,4 +1,3 @@
-import re
 '''
     Tiny Search Engine - Part 1 - Build a search index
 
@@ -21,7 +20,7 @@ import re
         .
     }
 '''
-
+import re
 # helper function to load the stop words from a file
 def load_stopwords(filename):
     '''
