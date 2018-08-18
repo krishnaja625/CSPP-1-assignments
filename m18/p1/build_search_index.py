@@ -40,11 +40,13 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    regex = re.compile('[^a-z]')
-    w = [regex.sub("", w.strip()) for w in text.lower().split(" ")]
+    text_ = text.lower()
+    word = text_.split(" ")
+    word = ["".join([j if ord(j) in range(ord('a'), ord('z')+1) \
+                else "" for j in i]) for i in text_list]
     stop_words = load_stopwords("stopwords.txt")
-    w = [i for i in w if i not in stop_words]
-    return w
+    word = [i for i in word if i not in stop_words]
+    return word
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
