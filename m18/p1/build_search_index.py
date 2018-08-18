@@ -51,6 +51,7 @@ def build_search_index(docs):
     # initialize a search index (an empty dictionary)
     dictionary_1 = {}
     list_1 = []
+    count = 0
     for line in docs:
         word_1 = word_list(line)
         index_word = docs.index(line)
