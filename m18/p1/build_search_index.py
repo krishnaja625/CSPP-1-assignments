@@ -61,8 +61,8 @@ def build_search_index(docs):
     for w in word_1:
         for word in w:
             if word not in dictionary_1.keys():
-                dictionary_1[i] = [(indx_, word_.count(i)) \
-                for indx_, word_ in enumerate(word_1) if i in word_]
+                dictionary_1[word] = [(indx_, word_.count(word)) \
+                for indx_, word_ in enumerate(word_1) if word in word_]
     return dictionary_1
     # iterate through all the docs
     # keep track of doc_id which is the list index corresponding the document
