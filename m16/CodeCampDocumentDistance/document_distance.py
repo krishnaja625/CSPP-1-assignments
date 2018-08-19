@@ -30,13 +30,13 @@ def similarity(dict1, dict2):
     denom_1 = math.sqrt(sum([v[0]**2 for v in word_freq.values()]))
     denom_2 = math.sqrt(sum([v[1]**2 for v in word_freq.values()]))
     return numer_n/(denom_1*denom_2)
-def load_stopwords(file_name):
+def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
-    with open(file_name, 'r') as file_name:
-        for line in file_name:
+    with open(filename, 'r') as filename:
+        for line in filename:
             stopwords[line.strip()] = 0
     return stopwords
 
