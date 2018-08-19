@@ -11,7 +11,7 @@ def word_list(string):
 def remove_stopwords(word, dict_1, stop_word, index):
     '''function to remove stopwords'''
     for w_1 in word:
-        if w_1 not in stop_word:
+        if w_1 not in stop_word and w_1 != '':
             if w_1 not in dict_1.keys():
                 dict_1[w_1] = [0, 0]
             dict_1[w_1][index] += 1
