@@ -11,7 +11,7 @@ def word_list(string):
 def remove_stopwords(word, dict_1, stop_word, index):
     '''function to remove stopwords'''
     for w_1 in word:
-        if w_1 not in stop_word and len(w_1) > 0:
+        if w_1 not in stop_word:
             if w_1 not in dict_1.keys():
                 dict_1[w_1] = [0, 0]
             dict_1[w_1][index] += 1
@@ -30,13 +30,13 @@ def similarity(dict1, dict2):
     denom_1 = math.sqrt(sum([v[0]**2 for v in word_freq.values()]))
     denom_2 = math.sqrt(sum([v[1]**2 for v in word_freq.values()]))
     return numer_n/(denom_1*denom_2)
-def load_stopwords(filename):
+def load_stopwords(file_name):
     '''
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
-    with open(filename, 'r') as filename:
-        for line in filename:
+    with open(file_name, 'r') as file_name:
+        for line in file_name:
             stopwords[line.strip()] = 0
     return stopwords
 
