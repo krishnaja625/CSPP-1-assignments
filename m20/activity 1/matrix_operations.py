@@ -32,11 +32,11 @@ def add_matrix(m1, m2):
 
     matrix_result = []
     if len(m1) != len(m2):
-        print("Error! Matrix shapes invalid for addition")
+        print("Error: Matrix shapes invalid for addition")
         return
     for i,j in zip(m1,m2):
         if len(i) != len(j):
-            print("Error! Matrix shapes invalid for addition")
+            print("Error: Matrix shapes invalid for addition")
     for i in range(len(m1)):
         li_st = []
         for j in range(len(m1[i])):
