@@ -39,7 +39,7 @@ def add_matrix(m1, m2):
             print("Error: Matrix shapes invalid for addition")
     for i in range(len(m1)):
         li_st = []
-        for j in range(len(m1[i])-1):
+        for j in range(len(m1[i])):
             li_st.append(m1[i][j] + m2[i][j])
         matrix_result.append(li_st)
     return matrix_result
