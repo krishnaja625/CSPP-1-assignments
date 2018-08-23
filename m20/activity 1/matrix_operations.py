@@ -17,6 +17,7 @@ def mult_matrix(m_1, m_2):
                 a_1.append(Res_1)
             Result_1.append(a_1)
         return Result_1
+    else:
         print("Error: Matrix shapes invalid for mult")
         return None
 
