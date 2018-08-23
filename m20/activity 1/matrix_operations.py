@@ -17,7 +17,6 @@ def mult_matrix(m_1, m_2):
                 a_1.append(Res_1)
             Result_1.append(a_1)
         return Result_1
-    else:
         print("Error: Matrix shapes invalid for mult")
         return None
 
@@ -63,6 +62,7 @@ def read_matrix():
             return None
         matrix_1.append(lst_1)
     return matrix_1
+
 def main():
     # read matrix 1
 
@@ -73,7 +73,7 @@ def main():
     # multiply matrix 1 and matrix 2
     matrix_1 = read_matrix()
     matrix_2 = read_matrix()
-    if(matrix_1 != None and matrix_2 != None):
+    if(matrix_1 is not None and matrix_2 is not None):
         print(add_matrix(matrix_1, matrix_2))
         print(mult_matrix(matrix_1, matrix_2))
 if __name__ == '__main__':
