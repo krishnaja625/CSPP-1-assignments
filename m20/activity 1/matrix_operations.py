@@ -7,16 +7,16 @@ def mult_matrix(m_1, m_2):
         error message should be "Error: Matrix shapes invalid for mult"
     '''
     if len(m_1[0]) == len(m_2):
-        result_1 = []
+        Result_1 = []
         for i in range(len(m_1)):
             a_1 = []
             for j in range(len(m_2[0])):
-                res_1 = 0
+                Res_1 = 0
                 for k in range(len(m_2)):
-                    res_1 += m_1[i][k] * m_2[k][j]
-                a_1.append(res_1)
-            result_1.append(a_1)
-        return result_1
+                    Res_1 += m_1[i][k] * m_2[k][j]
+                a_1.append(Res_1)
+            Result_1.append(a_1)
+        return Result_1
         print("Error: Matrix shapes invalid for mult")
         return None
 
@@ -56,7 +56,6 @@ def read_matrix():
     rows_mat = int(inp[0])
     cols_mat = int(inp[1])
     for i in range(rows_mat):
-        i = i
         lst_1 = [int(i) for i in input().split(" ")]
         if len(lst_1) != cols_mat:
             print("Error: Invalid input for the matrix")
