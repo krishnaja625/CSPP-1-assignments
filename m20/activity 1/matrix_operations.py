@@ -9,13 +9,13 @@ def mult_matrix(m1, m2):
     if len(m1[0]) == len(m2):
         Result_1 = []
         for i in range(len(m1)):
-            a = []
+            a_1 = []
             for j in range(len(m2[0])):
                 Res_1 = 0
                 for k in range(len(m2)):
                     Res_1 += m1[i][k] * m2[k][j]
-                a.append(Res_1)
-            Result_1.append(a)
+                a_1.append(Res_1)
+            Result_1.append(a_1)
         return Result_1
     else:
         print("Error: Matrix shapes invalid for mult")
@@ -57,11 +57,11 @@ def read_matrix():
     rows_mat = int(inp[0])
     cols_mat = int(inp[1])
     for i in range(rows_mat):
-        lst = [int(i) for i in input().split(" ")]
-        if len(lst) != cols_mat:
+        lst_1 = [int(i) for i in input().split(" ")]
+        if len(lst_1) != cols_mat:
             print("Error: Invalid input for the matrix")
             return None
-        matrix_1.append(lst)
+        matrix_1.append(lst_1)
     return matrix_1
 def main():
     # read matrix 1
