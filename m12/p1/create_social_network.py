@@ -35,7 +35,7 @@ def create_social_network(data):
         if "follows" not in data1:
             dic = {}
             return dic
-        str_1 = data1.split(" follows ")
+        str_1 = data1.split(" ")
         list1 = []
         list1.append(str_1[0])
         str_1.remove(str_1[0])
