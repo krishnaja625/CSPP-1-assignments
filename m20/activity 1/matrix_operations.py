@@ -1,4 +1,4 @@
-def mult_matrix(m_1, m_2):
+def mult_matrix(m1, m2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -6,21 +6,22 @@ def mult_matrix(m_1, m_2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    if len(m_1[0]) == len(m_2):
-        result_1 = []
-        for i in range(len(m_1)):
+    if len(m1[0]) == len(m2):
+        Result_1 = []
+        for i in range(len(m1)):
             a_1 = []
-            for j in range(len(m_2[0])):
-                res_1 = 0
-                for k in range(len(m_2)):
-                    res_1 += m_1[i][k] * m_2[k][j]
-                a_1.append(res_1)
-            result_1.append(a_1)
-        return result_1
+            for j in range(len(m2[0])):
+                Res_1 = 0
+                for k in range(len(m2)):
+                    Res_1 += m1[i][k] * m2[k][j]
+                a_1.append(Res_1)
+            Result_1.append(a_1)
+        return Result_1
+    else:
         print("Error: Matrix shapes invalid for mult")
         return None
 
-def add_matrix(m_1, m_2):
+def add_matrix(m1, m2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -30,17 +31,17 @@ def add_matrix(m_1, m_2):
     '''
 
     matrix_result = []
-    if len(m_1) != len(m_2):
+    if len(m1) != len(m2):
         print("Error: Matrix shapes invalid for addition")
         return None
-    for i, j in zip(m_1, m_2):
+    for i, j in zip(m1, m2):
         if len(i) != len(j):
             print("Error: Matrix shapes invalid for addition")
             return None
-    for i in range(len(m_1)):
+    for i in range(len(m1)):
         li_st = []
-        for j in range(len(m_1[i])):
-            li_st.append(m_1[i][j] + m_2[i][j])
+        for j in range(len(m1[i])):
+            li_st.append(m1[i][j] + m2[i][j])
         matrix_result.append(li_st)
     return matrix_result
 def read_matrix():
@@ -56,14 +57,12 @@ def read_matrix():
     rows_mat = int(inp[0])
     cols_mat = int(inp[1])
     for i in range(rows_mat):
-        i = i
         lst_1 = [int(i) for i in input().split(" ")]
         if len(lst_1) != cols_mat:
             print("Error: Invalid input for the matrix")
             return None
         matrix_1.append(lst_1)
     return matrix_1
-
 def main():
     # read matrix 1
 
