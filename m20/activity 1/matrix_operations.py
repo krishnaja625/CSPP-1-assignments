@@ -56,6 +56,7 @@ def read_matrix():
     rows_mat = int(inp[0])
     cols_mat = int(inp[1])
     for i in range(rows_mat):
+        i = i
         lst_1 = [int(i) for i in input().split(" ")]
         if len(lst_1) != cols_mat:
             print("Error: Invalid input for the matrix")
