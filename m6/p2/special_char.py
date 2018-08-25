@@ -9,7 +9,7 @@ def main():
 	B = ""
 
 	for char in A:
-		if char in "!@#$%^&*":
+		if char in "!@#$%^&*' '()":
 			char = " "
 			B = B+char
 		else:
