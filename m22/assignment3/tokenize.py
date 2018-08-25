@@ -28,11 +28,12 @@ def tokenize(string):
     #                 dict_1[word] += line.count(word)  
     # return dict_1
     dicts = {}
+    line = ''
     for i in string:
          dicts[i] = 0
     for i in string:
-        for j in range(len(text)):
-            if text[j:j+len(i)] == i:
+        for j in range(len(line)):
+            if line[j:j+len(i)] == i:
                 dicts[i] += 1
     return dicts
 def main():
