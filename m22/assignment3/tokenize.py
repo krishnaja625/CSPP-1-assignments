@@ -4,9 +4,11 @@ each word
 '''
 def Words_list(doc):
 
+    word = doc.split(" ")
+    words =[]
     final_string = ""
     for char in doc:
-        if char in '";\n,':
+        if char in '";\n':
             char = ""
             final_string = final_string+char
         else:
