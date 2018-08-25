@@ -8,7 +8,7 @@ def Words_list(doc):
     words =[]
     final_string = ""
     for char in doc:
-        if char in '"':
+        if char in '";\n,':
             char = ""
             final_string = final_string+char
         else:
