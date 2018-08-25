@@ -30,7 +30,7 @@ def main():
         string += '\n'
     # line = string.splitlines()
 
-    print(Words_list(string))
+    print(tokenize(Words_list(string)))
 
 if __name__ == '__main__':
     main()
