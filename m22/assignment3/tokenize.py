@@ -2,6 +2,7 @@
 Write a function to tokenize a given string and return a dictionary with the frequency of
 each word
 '''
+import re
 def Words_list(doc):
 
     word = doc.lower()
