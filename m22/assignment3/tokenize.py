@@ -33,6 +33,7 @@ def tokenize(string):
     #                 dict_1[word] += line.count(word)  
     # return dict_1
     dicts = {}
+    word_list = []
     word_list = Words_list(string)
     for i in word_list:
          dicts[i] = 0
