@@ -20,6 +20,7 @@ def tokenize(string):
     #                 dict_1[word] += line.count(word)  
     # return dict_1
     lines = [line.split() for line in string.split('\n')]
+    words =[]
 
     for i in range(len(lines)):
         for word in lines[i]:
