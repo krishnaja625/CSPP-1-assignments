@@ -28,11 +28,9 @@ def tokenize(string):
     #                 dict_1[word] += line.count(word)  
     # return dict_1
     dicts = {}
-    list_1 = []
-    list_1 = Words_list(string)
-    for i in list_1:
+    for i in string:
          dicts[i] = 0
-    for i in words_list:
+    for i in string:
         for j in range(len(text)):
             if text[j:j+len(i)] == i:
                 dicts[i] += 1
@@ -45,7 +43,8 @@ def main():
         string += input()
         string += '\n'
     # line = string.splitlines()
-    print(tokenize(string))
+
+    print(tokenize(Words_list(string)))
 
 if __name__ == '__main__':
     main()
