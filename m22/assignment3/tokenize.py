@@ -4,8 +4,7 @@ each word
 '''
 def Words_list(doc):
 
-    word = doc.copy()
-    word = word.split(" ")
+    word = doc.split(" ")
     words =[]
     for w in word:
         words.append(w.strip())
