@@ -4,8 +4,6 @@ each word
 '''
 def Words_list(doc):
 
-    word = doc.split(" ")
-    words =[]
     final_string = ""
     for char in doc:
         if char in '";\n,':
@@ -14,6 +12,8 @@ def Words_list(doc):
         else:
             final_string = final_string+char
     word = final_string.split(" ")
+    words =[]
+    word = word.split(" ")
     for w in word:
         words.append(w.strip())
     return word
