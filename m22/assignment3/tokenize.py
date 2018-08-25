@@ -2,6 +2,18 @@
 Write a function to tokenize a given string and return a dictionary with the frequency of
 each word
 '''
+def Words_list(doc):
+
+    word = doc.lower()
+    word = word.split(" ")
+    words =[]
+    for w in word:
+        words.append(w.strip())
+    words1 =[]
+    regex = re.compile('[^a-z]')    
+    for w in words:
+        words1.append(regex.sub("", w))
+    return words1
 
 def tokenize(string):
     # line_1 = []
@@ -19,19 +31,15 @@ def tokenize(string):
     #             else:
     #                 dict_1[word] += line.count(word)  
     # return dict_1
-    lines = [line.split() for line in string.split('\n')]
-    words =[]
-
-    for i in range(len(lines)):
-        for word in lines[i]:
-            # if the word is not in the dictionary, create the entry
-            # word = word.lower()
-            if word not in words:
-                words[word] = {'count':0, 'lines':set()}
-
-            # update the count and add the line number to the set
-            words[word]['count'] += 1
-            words[word]['lines'].add(i+1)
+    dicts = {}
+    word_list = Words_list(string)
+    for i in word_list:
+         dicts[i] = 0
+    for i in words_list:
+        for j in range(len(text)):
+            if text[j:j+len(i)] == i:
+                dicts[i] += 1
+    return dicts
 def main():
     string = ''
     lines = int(input())
