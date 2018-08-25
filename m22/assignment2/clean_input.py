@@ -11,7 +11,7 @@ def clean_string(string):
 			B = B+char
 		else:
 			B = B+char
-	print(B)
+	return B
 
 def main():
     string = input()
