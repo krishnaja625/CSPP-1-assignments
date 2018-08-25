@@ -14,7 +14,7 @@ def tokenize(string):
         for line in line_2:
             for word in line:
                 if word not in list_3:
-                    dict_1.keys().append(word)
+                    dict_1.append(word)
                     dict_1[word] += line.count(word) 
                 else:
                     dict_1[word] += line.count(word)  
