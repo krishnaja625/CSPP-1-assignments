@@ -9,19 +9,20 @@ def Words_list(doc):
     for w in word:
         words.append(w.strip())
     return words
+#     return words
 
-def tokenize(string):
+# def tokenize(string):
 
-    dicts = {}
-    for i in string:
-        line = list(i)
-    for i in string:
-         dicts[i] = 0
-    for i in string:
-        for j in range(len(line)):
-            if line[j:j+len(i)] == i:
-                dicts[i] += 1
-    return dicts
+#     dicts = {}
+#     for i in string:
+#         line = list(i)
+#     for i in string:
+#          dicts[i] = 0
+#     for i in string:
+#         for j in range(len(line)):
+#             if line[j:j+len(i)] == i:
+#                 dicts[i] += 1
+#     return dicts
 def main():
     string = ''
     lines = int(input())
@@ -31,7 +32,7 @@ def main():
         string += '\n'
     # line = string.splitlines()
 
-    print(tokenize(Words_list(string)))
+    print(Words_list(string))
 
 if __name__ == '__main__':
     main()
