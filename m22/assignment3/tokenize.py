@@ -6,9 +6,17 @@ def Words_list(doc):
 
     word = doc.split(" ")
     words =[]
+    final_string = ""
+    for char in doc:
+        if char in '"':
+            char = ""
+            final_string = final_string+char
+        else:
+            final_string = final_string+char
+    word = final_string.split(" ")
     for w in word:
         words.append(w.strip())
-    return words
+    return word
 
 def tokenize(string):
 
