@@ -4,7 +4,6 @@ each word
 '''
 def Words_list(doc):
 
-    word = doc.lower()
     word = word.split(" ")
     words =[]
     for w in word:
@@ -12,21 +11,7 @@ def Words_list(doc):
     return words
 
 def tokenize(string):
-    # line_1 = []
-    # line_2 = []
-    # list_3 = []
-    # dict_1 = {}
-    # for line in string:
-    #     line_1 = line.split()
-    #     line_2.append(line_1)
-    #     for line in line_2:
-    #         for word in line:
-    #             if word not in list_3:
-    #                 dict_1.append(word)
-    #                 dict_1[word] += line.count(word) 
-    #             else:
-    #                 dict_1[word] += line.count(word)  
-    # return dict_1
+
     dicts = {}
     for i in string:
         line = list(i)
