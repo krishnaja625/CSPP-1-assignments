@@ -14,7 +14,7 @@ def tokenize(string):
         line_2.append(line_1)
         for line in line_2:
             for word in line:
-                if word not in list_3():
+                if word not in list_3:
                     list_3.append(word)
                 else:
                     C += line.count(word) 
