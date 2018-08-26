@@ -1,4 +1,3 @@
-'''Problem 1 - Build the Shift Dictionary and Apply Shift'''
 # The Message class contains methods that could be used to apply a
 # cipher to a string, either to encrypt or to decrypt a message
 # (since for Caesar codes this is the same action).
@@ -40,6 +39,7 @@
 # Remember that spaces and punctuation should not be changed by the cipher.
 
 # Helper code
+import string
 def load_words(file_name):
     '''
     file_name (string): the name of the file containing
@@ -65,7 +65,59 @@ WORDLIST_FILENAME = 'words.txt'
 
 
 ### Paste your implementation of the Message class here
-        
+class Message():
+    '''
+    message
+    '''
+    def __init__(self, text):
+        '''
+        constructor
+        '''
+        self.message_text = text
+        self.valid_words = load_words("words.txt")
+        self.shift_dict = {}
+    def get_message_text(self):
+        '''
+        message getter
+        '''
+        return self.message_text
+    def get_valid_words(self):
+        '''
+        valid words
+        '''
+        return self.valid_words[:]
+    def build_shift_dict(self, shift):
+        '''
+        letters of string
+        '''
+        lower_keys = list(string.ascii_lowercase)
+        lower_values = list(string.ascii_lowercase)
+        shift_lower_vals = lower_values[shift:] + lower_values[:shift]
+        upper_keys = list(string.ascii_uppercase)
+        upper_values = list(string.ascii_uppercase)
+        shift_upper_vals = upper_values[shift:] + upper_values[:shift]
+        total_keys = lower_keys + upper_keys
+        total_values = shift_lower_vals + shift_upper_vals
+        self.shift_dict = dict(zip(total_keys, total_values))
+        return self.shift_dict
+    def apply_shift(self, shift):
+        '''
+        shift strings
+        '''
+        new_msg = []
+        for i in self.message_text:
+            if i not in self.build_shift_dict(shift).keys():
+                new_msg.append(i)
+                continue
+            else:
+                new_msg.append(self.build_shift_dict(shift)[i])
+        return ''.join(new_msg)
+
+
+
+
+    # def get_message_text(self):
+    #     return self.
 
 def main():
     '''
@@ -77,3 +129,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
